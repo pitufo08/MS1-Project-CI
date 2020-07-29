@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi|Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* the whole structure font and color*/
+body {
+    font-family: Gugi;
+    color: #777777
+}
+
+/* logo gets font style, keeping with uppercase, space between the letters, and color */
+h2 {
+    font-family: Roboto;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #555555;
+}
+
+/* increasing the size of the logo and moving it to the left*/
+#logo {
+    background: url("/img/libella_logo0.jpg") no-repeat;
+    float: left;
+    height: 60px;
+    width: 18%;
+    margin-top: 6px;
+}
+
+/* Removing bullets points and creating space to the menu*/
+#menu {
+    font-size: 110%;
+    list-style-type: none;
+    letter-spacing: 4px;
+}
+
+/* Setting the menu in visual balance with the logo together with the design choice of 75px but there are other sizes like 150px, 300px, 600px and 900px*/
+#logo,
+#menu {
+    line-height: 75px;
+}
+
+/* Setting the  menu context to right */
+#menu li {
+    float: right;
+    margin-right: 30px;
+}
+
+/* styling the menu with colors. */
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* adding a pseudo class when hovering with the mouse to create animation and color and change the state of the html element*/
+#menu a:hover {
+    border-bottom: 1px solid #777777;
+}
+
+.active {
+    border-bottom: 1px solid #777777;
+}
+
+/* adding the right size for the presentation imagen */
+#libella-img {
+    height: 600px;
+    width: 100%;
+    background: url("/img/picture0.jpg") no-repeat;
+    /*adding the zoom for the imagen*/
+    animation-name: libella-zoom;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+/* creating a space on the header with the overflow: hidden also adding position for the container in the imagen*/
+#libella-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    /* adding the container on the picture*/
+    position: relative;
+    background-repeat: repeat;
+}
+
+#libella-outer h4 {}
+
+/*adding  keyframes with scale for later adding animation on #libella-img */
+@keyframes libella-zoom {
+    from {
+        transform: scale(2);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* specify the color to overwrite the deaful color on the page*/
+#cover-text,
+#cover-text h2 {
+    color: #ffffff;
+}
+
+/* creating square color and text over the picture with font */
+#cover-text {
+    font-size: 130%;
+    font-family: Roboto;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    width: 540px;
+    height: 130px;
+    /* using rgb color to see the color throught the image*/
+    background-color: rgba(138, 130, 130, 0.692);
+    /*position is fixed but stills uses a default behavior and is not stuck on the imagen yet. We do it on #libella-outer */
+    bottom: 0px;
+    left: 10px;
+    margin: 280px;
+    padding: 0;
+    position: absolute;
+}
+
+#cover-text h4 {
+    text-align: center;
+    font-size: 70%;
+    margin: 30px;
+
+}
+
+/* creating the section 2 - whith structure*/
+#about-libella {
+    height: 600px;
+}
+
+/* adding the text on the left */
+#left-about {
+    padding-top: 30px;
+    width: 33%;
+    float: left;
+    /* adding colors to the design structure when building structure*/
+    /*background-color: #000000;*/
+}
+
+/* adding the text on the right */
+#right-about {
+    padding-top: 30px;
+    width: 33%;
+    float: right;
+    /* adding colors to the design structure when building structure*/
+
+}
+
+/*adding margin with auto for setting the center text in the middle of the 2nd section*/
+#center-about {
+    width: 33%;
+    margin: 0 auto;
+    /* adding colors to the design structure when building structure*/
+
+}
+
+hr {
+    border-top: 1px solid #777777;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/*styling the left about heading to aline with the content and the rest of the section and creating space by using margin-bottom*/
+.left-about-heading {
+    width: 50%;
+    float: right;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+/* providing some clearings around the rule so the context of become more structured*/
+
+
+/* width 50% that is 50% of trhe parent div with a class right-header and 33% of the entired screen size and adding clear both blocking the content align vertically with div*/
+.right-about-heading {
+    width: 50%;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.right-about-heading h2 {
+    text-align: right;
+}
+
+.right-about-heading p {
+    text-align: right;
+}
+
+#about {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 280%;
+}
+
+/* adding container for  a center imagen with thin border and adding border-radius to make a circle in the middel and aline the circle in the middle with margin*/
+#center-container {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* adding imagen in the center and inline wiht border-radius*/
+#circle-logo-bg {
+    background: url("/img/maps-background.jpg") no-repeat center center;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* adding image for the background*/
+#projects1 {
+    background-image: url("/img/projects01.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* adding the projects squares in the right size to the section*/
+#projects1 div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    width: 29%;
+    height: 300px;
+    float: left;
+    padding: 30px 0 0 10px;
+    text-align: center;
+    margin: 40px;
+}
+
+/* adding color white to the context h2 for better visual in the project squares*/
+#projects h2 {
+    color: #fafafa;
+    
+    
+}
+
+footer {
+    height: 150px;
+}
+
+/* adding center to the icons*/
+.social-networks {
+    text-align: center;
+
+}
+
+/* settintg the icons inline */
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 300%;
+    margin: 5%;
+    padding: 5%;
+    color: #d19b05;
+}
+
+#projects h2 {
+    margin: 80% 0;
+    text-align: center;
+    font-size: 200%;
+    color: #ffffff;
+    margin: 0%;
+    padding-right: 20%;
+    
+}
+/* Pad responsive */
+@media screen and (max-with: 1393px ){
+    #about-libella{
+    width: 65%;
+    height: 1200px;
+    margin: 0 auto;
+    }
+
+    #about{
+       padding: 30px 0; 
+       margin-top: 0;
+    }
+
+    #left-about, #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about{
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #projects1 div{
+    width: 100%;
+    clear: both;
+    height: 150%;
+    border-style: solid;
+    border-bottom-width:1px;
+    border-bottom-color: #fff;
+    padding: 0;
+    }
+
+    hr {
+       display: none; 
+    }
+
+   /* Contact */
+
+
+
+    /* mobile responsive*/
+    @media screen and (max-with:943px) {
+    #menu{
+        clear: left;
+        float:left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }    
+    
+    #cover-text{
+        left: 0px;
+    }
+
+    #about-libella{
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+    
+    #left-about-heading, .right-about-heading{
+        width: inherit;
+    }
+
+    .left-about-heading h2 , .right-about-heading h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p {
+        text-align: center;
+        padding: 0 20px 0 20px;
+
+    }
+}
